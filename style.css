@@ -1,0 +1,83 @@
+.container {
+    max-width: 1100px;
+    min-height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.block {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-align-justify-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.block-img, .block-content {
+    flex: 1;
+}
+
+.block-img img {
+    width: 350px;
+}
+
+.btn-more-about {
+    padding: 15px 25px;
+    border: 2px solid black;
+    border-radius: 30px;
+    font-weight: bold;
+    margin: 10px 10px 10px 0;
+}
+
+@media (max-width: 1000px) {
+    .block {
+        flex-direction: column;
+    }
+}
+
+/* Стили для попапа */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.popup-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #3a3a3a;
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    color: red;
+    font-weight: bold;
+}
+
+/* Стили для попап-контента */
+.popup h2 {
+    font-size: 24px;
+}
+
+.popup p {
+    font-size: 16px;
+}
